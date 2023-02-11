@@ -1,4 +1,4 @@
-import { render, screen, prettyDOM } from '@testing-library/react'
+import { render, screen } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import { ComponentFirst } from './index'
 
@@ -12,7 +12,6 @@ describe('ComponentFirst', () => {
     expect(bt).toBeInTheDocument()
 
     await userEvent.click(bt)
-    await console.log(prettyDOM())
     expect(screen.getByText(/Second/)).toBeInTheDocument()
     await userEvent.click(bt)
     expect(screen.queryByText(/Second/)).not.toBeInTheDocument()

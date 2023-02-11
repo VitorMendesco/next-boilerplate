@@ -1,0 +1,20 @@
+# dependencies
+/node_modules
+/.husky/
+
+# testing
+/coverage
+
+# next.js
+/.swc/
+/.next/
+/out/
+
+# production
+/build
+
+# local env files
+.env*.local
+
+# vercel
+.vercel
