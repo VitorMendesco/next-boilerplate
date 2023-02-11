@@ -1,16 +1,20 @@
-import ComponentSecond from '@components/ComponentSecond'
+import { ComponentSecond } from '../ComponentSecond'
+import { useState } from 'react'
 
-interface ComponentFirstProps {
-  className: string
+type ComponentFirstProps = {
+  className?: string
 }
 
 const ComponentFirst = ({ className }: ComponentFirstProps) => {
+  const [show, setShow] = useState(false)
+
   return (
-    <>
+    <div data-testid="test">
       <h1 className={className}>ComponentFirst</h1>
-      <ComponentSecond />
-    </>
+      <button onClick={() => setShow(v => !v)}>click</button>
+      {show && <ComponentSecond />}
+    </div>
   )
 }
 
-export default ComponentFirst
+export { ComponentFirst }

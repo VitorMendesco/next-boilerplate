@@ -1,1 +1,1 @@
-export { default } from './ComponentSecond'
+export { ComponentSecond } from './ComponentSecond'

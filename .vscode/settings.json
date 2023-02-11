@@ -15,10 +15,12 @@
   "eslint.validate": ["javascript", "javascriptreact", "typescript", "typescriptreact"],
 
   // LANGUAGE FORMATTERS
+  "javascipt.preferences.importModuleSpecifier": "non-relative",
   "[javascript]": {
     "editor.autoClosingBrackets": "always",
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
+  "typescript.preferences.importModuleSpecifier": "non-relative",
   "[typescript]": {
     "editor.autoClosingBrackets": "always",
     "editor.defaultFormatter": "esbenp.prettier-vscode"

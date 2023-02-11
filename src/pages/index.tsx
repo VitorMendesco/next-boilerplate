@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import ComponentFirst from '@components/ComponentFirst'
+import { ComponentFirst } from '@components/ComponentFirst'
 
 import { Outfit } from '@next/font/google'
 
