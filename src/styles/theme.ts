@@ -9,13 +9,14 @@ export const outfit = Outfit({
   fallback: ['Helvetica', 'Arial', 'sans-serif'],
 })
 
-export const theme = createTheme({
+export const baseTheme = createTheme({
   palette: {
+    mode: 'light',
     primary: {
-      main: '#ed156b',
+      main: '#1484ed',
     },
     secondary: {
-      main: '#19857b',
+      main: '#580505',
     },
     error: {
       main: red.A400,
@@ -23,5 +24,29 @@ export const theme = createTheme({
   },
   typography: {
     fontFamily: outfit.style.fontFamily,
+  },
+})
+
+export const lightTheme = createTheme({
+  palette: {
+    mode: 'light',
+    primary: {
+      main: '#2d2d2d',
+    },
+    secondary: {
+      main: '#ed145b',
+    },
+  },
+})
+
+export const darkTheme = createTheme({
+  palette: {
+    mode: 'dark',
+    primary: {
+      main: '#ed145b',
+    },
+    secondary: {
+      main: '#2d2d2d',
+    },
   },
 })

@@ -20,6 +20,9 @@
     "incremental": true,
     "baseUrl": ".",
     "paths": {
+      "@contexts": ["./src/contexts"],
+      "@contexts/*": ["./src/contexts/*"],
+      "@components": ["./src/components"],
       "@components/*": ["./src/components/*"],
       "@styles/*": ["./src/styles/*"],
       "@utils/*": ["./src/utils/*"]

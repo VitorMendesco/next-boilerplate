@@ -4,14 +4,14 @@ import createEmotionServer from '@emotion/server/create-instance'
 
 import { createEmotionCache } from '@utils/styles/createEmotionCache'
 
-import { theme, outfit } from '@styles/theme'
+import { baseTheme, outfit } from '@styles/theme'
 
 export default class MyDocument extends Document {
   render() {
     return (
       <Html lang="pt-BR" className={outfit.className}>
         <Head>
-          <meta name="theme-color" content={theme.palette.primary.main} />
+          <meta name="theme-color" content={baseTheme.palette.primary.main} />
           <meta name="emotion-insertion-point" content="" />
           {(this.props as any).emotionStyleTags}
         </Head>

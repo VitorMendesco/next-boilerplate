@@ -1,6 +1,6 @@
 import { useState } from 'react'
 
-import { ComponentSecond } from '@components/ComponentSecond'
+import { ComponentSecond } from '@components'
 import Typography from '@mui/material/Typography'
 import Button from '@mui/material/Button'
 import AddReactionIcon from '@mui/icons-material/AddReaction'
