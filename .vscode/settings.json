@@ -1,5 +1,6 @@
 {
   // EDITOR
+  "editor.rulers": [110],
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.semanticHighlighting.enabled": true,
   "editor.formatOnSave": false,
@@ -55,5 +56,5 @@
     ".vscode",
     ".prettierrc*"
   ],
-  "cSpell.userWords": ["airbnb", "commitlint", "esnext"]
+  "cSpell.words": ["airbnb", "commitlint", "esnext", "latin"]
 }
