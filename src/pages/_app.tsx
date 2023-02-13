@@ -23,7 +23,7 @@ export default function MyApp(props: MyAppProps) {
   const [theme, setTheme] = useState<Theme>(baseTheme)
 
   useEffect(() => {
-    setTheme({ ...baseTheme, ...(isDark ? darkTheme : lightTheme) })
+    setTheme({ ...(isDark ? darkTheme : lightTheme) })
   }, [isDark])
 
   return (

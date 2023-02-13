@@ -1,6 +1,7 @@
 import { Outfit } from '@next/font/google'
 import { createTheme } from '@mui/material/styles'
-import { red } from '@mui/material/colors'
+
+import { baseTheme as base, lightTheme as light, darkTheme as dark } from '@mendesco/react-component-lib'
 
 export const outfit = Outfit({
   weight: ['300', '400', '500', '700'],
@@ -10,43 +11,18 @@ export const outfit = Outfit({
 })
 
 export const baseTheme = createTheme({
-  palette: {
-    mode: 'light',
-    primary: {
-      main: '#1484ed',
-    },
-    secondary: {
-      main: '#580505',
-    },
-    error: {
-      main: red.A400,
-    },
-  },
+  ...base,
   typography: {
     fontFamily: outfit.style.fontFamily,
   },
 })
 
 export const lightTheme = createTheme({
-  palette: {
-    mode: 'light',
-    primary: {
-      main: '#2d2d2d',
-    },
-    secondary: {
-      main: '#ed145b',
-    },
-  },
+  ...baseTheme,
+  ...light,
 })
 
 export const darkTheme = createTheme({
-  palette: {
-    mode: 'dark',
-    primary: {
-      main: '#ed145b',
-    },
-    secondary: {
-      main: '#2d2d2d',
-    },
-  },
+  ...baseTheme,
+  ...dark,
 })

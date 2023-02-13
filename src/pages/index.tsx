@@ -1,3 +1,5 @@
+import { Button } from '@mendesco/react-component-lib'
+
 import { useContext } from 'react'
 import Head from 'next/head'
 
@@ -20,6 +22,7 @@ export default function Home({ repositories }: HomeProps) {
       <main>
         <Typography variant="h6">{process.env.NEXT_PUBLIC_VARIABLE}</Typography>
         <Switch checked={isDark} onChange={() => setIsDark(!isDark)} />
+        <Button label="Stylized" />
         <ComponentFirst />
         {repositories?.map(repo => (
           <Typography variant="body1" key={repo.id}>
