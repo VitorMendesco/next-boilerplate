@@ -9,6 +9,8 @@ import { Switch, Typography } from '@mui/material'
 import { HomeProps, Repository } from './types'
 import { ThemeContext, type ThemeContextType } from '@contexts'
 
+import axios from 'axios'
+
 export default function Home({ repositories }: HomeProps) {
   const { isDark, setIsDark } = useContext(ThemeContext) as ThemeContextType
 
@@ -35,8 +37,10 @@ export default function Home({ repositories }: HomeProps) {
 }
 
 export async function getServerSideProps() {
-  const response = await fetch('https://jsonplaceholder.typicode.com/users')
-  const repositories: Repository[] = await response.json()
+  const repositories: Repository[] = await (
+    await axios.get('https://jsonplaceholder.typicode.com/users')
+  ).data
+
   return {
     props: { repositories: repositories?.map(repo => ({ id: repo.id, name: repo.name })) },
   }
