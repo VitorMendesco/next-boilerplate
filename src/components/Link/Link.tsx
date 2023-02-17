@@ -1,5 +1,5 @@
 import { forwardRef } from 'react'
-import { useRouter } from 'next/router'
+import { usePathname } from 'next/navigation'
 
 import NextLink from 'next/link'
 import MuiLink from '@mui/material/Link'
@@ -16,7 +16,6 @@ const NextLinkComposed = forwardRef<HTMLAnchorElement, NextLinkComposedProps>(fu
   ref
 ) {
   const { to, linkAs, replace, scroll, shallow, prefetch, legacyBehavior = true, locale, ...other } = props
-
   return (
     <NextLink
       href={to}
@@ -51,10 +50,10 @@ const Link = forwardRef<HTMLAnchorElement, LinkProps>(function Link(props, ref) 
     ...other
   } = props
 
-  const router = useRouter()
+  const path = usePathname()
   const pathname = typeof href === 'string' ? href : href.pathname
   const className = clsx(classNameProps, {
-    [activeClassName]: router.pathname === pathname && activeClassName,
+    [activeClassName]: path === pathname && activeClassName,
   })
 
   const isExternal = typeof href === 'string' && (href.indexOf('http') === 0 || href.indexOf('mailto:') === 0)
